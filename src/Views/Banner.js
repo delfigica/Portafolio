@@ -15,7 +15,7 @@ export const Banner = () => {
       sx={
         laptop
           ? {
-              minHeight: "100vh",
+              height: "80vh",
               display: "flex",
               alignItems: "center",
               padding: "2em 5em",

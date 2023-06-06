@@ -5,18 +5,15 @@ import { theme } from "./Style";
 import { Proyects } from "./Components/Proyects";
 import { Box } from "@mui/system";
 import { proyects } from "./Data/ProyectsData";
+import { NavBar } from "./Components/NavBar";
 
 function App() {
   return (
-    <Box
-      // sx={{
-      //   backgroundColor: "#FF416C",
-      //   background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
-      // }}
-    >
+    <Box>
       <ThemeProvider theme={theme}>
+        <NavBar />
         <Banner />
-        <Box>
+        {/* <Box>
           {proyects.map((proyect, index) => (
             <Proyects
               key={proyect.title}
@@ -24,7 +21,7 @@ function App() {
               proyect={proyect}
             />
           ))}
-        </Box>
+        </Box> */}
       </ThemeProvider>
     </Box>
   );
