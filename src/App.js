@@ -6,6 +6,7 @@ import { Proyects } from "./Components/Proyects";
 import { Box } from "@mui/system";
 import { proyects } from "./Data/ProyectsData";
 import { NavBar } from "./Components/NavBar";
+import { AboutMe } from "./Views/AboutMe";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <NavBar />
         <Banner />
+        <AboutMe />
         {/* <Box>
           {proyects.map((proyect, index) => (
             <Proyects

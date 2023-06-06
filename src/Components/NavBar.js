@@ -18,6 +18,7 @@ export const NavBar = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+              backgroundColor: '#fff'
             }
           : {
               padding: ".5em 1em",
@@ -27,6 +28,8 @@ export const NavBar = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+              backgroundColor: '#fff'
+
             }
       }
     >
