@@ -1,81 +1,101 @@
-import { Typography } from "@mui/material";
-import { Box } from "@mui/system";
 import React from "react";
 
+import { Box } from "@mui/system";
+import { Typography, useMediaQuery, useTheme } from "@mui/material";
+
+import background from "../assets/images/bg-intro-desktop.svg";
+import computer from "../assets/images/computer.png";
+
 export const Banner = () => {
+  const theme = useTheme();
+  const laptop = useMediaQuery(theme.breakpoints.up("lg"));
+
   return (
     <Box
-      sx={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "center",
-      }}
+      sx={
+        laptop
+          ? {
+              minHeight: "100vh",
+              display: "flex",
+              alignItems: "center",
+              padding: "2em 5em",
+            }
+          : {
+              display: "flex",
+              flexDirection: "column-reverse",
+              padding: '1em 0'
+            }
+      }
     >
-      <Box
-        sx={{
-          background: "#F0EFEA",
-          minHeight: "55vh",
-          width: "80%",
-          display: "flex",
-          padding: "2em",
-          borderRadius: '10px 0px 0px 5px'
-        }}
-      >
-        <hr
-          style={{
-            border: "none",
-            borderLeft: "2px dotted #26261F",
-            height: "50vh",
-            width: "1px",
-          }}
-        />
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            margin: "10px 40px",
-            alignItems: "flex-start",
-          }}
+      <Box sx={laptop ? { width: "55%" } : {}}>
+        <Typography
+          color="primary"
+          sx={
+            laptop
+              ? { fontSize: "4em", fontWeight: 600, fontFamily: "Great Vibes" }
+              : {
+                  fontSize: "2.5em",
+                  fontWeight: 600,
+                  fontFamily: "Great Vibes",
+                  textAlign: 'center'
+                }
+          }
         >
-          <Box>
-            <Typography variant="h3" sx={{ fontSize: "2.2em" }}>
-              María Delfina Cañas
-            </Typography>
-            <Typography variant="h4" sx={{ fontSize: "1.2em" }}>
-              Full Stack Junior
-            </Typography>
-          </Box>
-          <Box>
-            <Typography
-              variant="h4"
-              sx={{ fontSize: "1.4em", marginLeft: "5px", marginBottom: '-10px' }}
-            >
-              Desarrolladora web
-            </Typography>
-            <Box
-              sx={{
+          Desarrolladora Web
+        </Typography>
+        <Typography sx={laptop ? { textAlign: "center", width: "80%" } : {textAlign: 'center'}}>
+          Aquí podras encontrar información sobre mi, mis proyectos y mis redes
+          de contacto
+        </Typography>
+      </Box>
+      <Box
+        sx={
+          laptop
+            ? {
+                width: "900px",
+                height: "500px",
+                background: `url(${background})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "700px",
+                backgroundPositionX: "center",
                 display: "flex",
-                flexDirection: "row",
                 alignItems: "center",
-              }}
-            >
-              <Typography variant="h2" sx={{ fontSize: "5em" }}>
-                Portafolio
-              </Typography>
-              <hr
-                style={{
-                  border: "none",
-                  borderTop: "2px dotted #26261F",
-                  height: "1px",
-                  width: "48vw",
-                  margin: '20px 0px 0px 10px'
-                }}
-              />
-            </Box>
-          </Box>
-        </Box>
+                justifyContent: "center",
+              }
+            : {
+                background: `url(${background})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "300px",
+                backgroundPositionX: "center",
+                width: "300px",
+                height: "250px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }
+        }
+      >
+        <Box
+          sx={
+            laptop
+              ? {
+                  width: "450px",
+                  height: "300px",
+                  background: `url(${computer})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "450px",
+                  backgroundPositionX: "center",
+                }
+              : {
+                  width: "300px",
+                  height: "200px",
+                  background: `url(${computer})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "300px",
+                  backgroundPositionX: "center",
+                }
+          }
+        ></Box>
       </Box>
     </Box>
   );
