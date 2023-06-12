@@ -52,7 +52,12 @@ export const Footer = () => {
       <Box
         sx={
           laptop
-            ? { display: "flex", color: "#fff", justifyContent: 'center', margin: 'auto' }
+            ? {
+                display: "flex",
+                color: "#fff",
+                justifyContent: "center",
+                margin: "auto",
+              }
             : {
                 color: "#fff",
               }
@@ -63,7 +68,13 @@ export const Footer = () => {
           target="_blank"
           style={{ textDecoration: "none", color: "#fff" }}
         >
-          <Box sx={laptop ? { display: "flex", margin: "0 10px" } : {margin: '10px', display: 'flex'}}>
+          <Box
+            sx={
+              laptop
+                ? { display: "flex", margin: "0 10px" }
+                : { margin: "10px", display: "flex" }
+            }
+          >
             <MailOutlineIcon sx={{ margin: "0px 5px" }} />{" "}
             <Typography>delfinamariacanas@gmail.com</Typography>
           </Box>
@@ -73,7 +84,13 @@ export const Footer = () => {
           target="_blank"
           style={{ textDecoration: "none", color: "#fff" }}
         >
-          <Box sx={laptop ? { display: "flex", margin: "0 10px" } : {margin: '10px', display: 'flex'}}>
+          <Box
+            sx={
+              laptop
+                ? { display: "flex", margin: "0 10px" }
+                : { margin: "10px", display: "flex" }
+            }
+          >
             <LinkedInIcon sx={{ margin: "0px 5px" }} />
             <Typography>Delfina Cañas</Typography>
           </Box>
@@ -83,7 +100,13 @@ export const Footer = () => {
           target="_blank"
           style={{ textDecoration: "none", color: "#fff" }}
         >
-          <Box sx={laptop ? { display: "flex", margin: "0 10px" } : {margin: '10px', display: 'flex'}}>
+          <Box
+            sx={
+              laptop
+                ? { display: "flex", margin: "0 10px" }
+                : { margin: "10px", display: "flex" }
+            }
+          >
             <GitHubIcon sx={{ margin: "0px 5px" }} />
             <Typography>delfigica</Typography>
           </Box>
