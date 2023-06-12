@@ -7,6 +7,8 @@ import { Box } from "@mui/system";
 import { proyects } from "./Data/ProyectsData";
 import { NavBar } from "./Components/NavBar";
 import { AboutMe } from "./Views/AboutMe";
+import { LastProyects } from "./Views/LastProyects";
+import { Footer } from "./Views/Footer";
 
 function App() {
   return (
@@ -15,15 +17,8 @@ function App() {
         <NavBar />
         <Banner />
         <AboutMe />
-        {/* <Box>
-          {proyects.map((proyect, index) => (
-            <Proyects
-              key={proyect.title}
-              flexDirection={index % 2 === 0 ? "row" : "row-reverse"}
-              proyect={proyect}
-            />
-          ))}
-        </Box> */}
+        <LastProyects />
+        <Footer />
       </ThemeProvider>
     </Box>
   );
