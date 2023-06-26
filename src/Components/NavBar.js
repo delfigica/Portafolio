@@ -26,7 +26,7 @@ export const NavBar = () => {
               justifyContent: "space-between",
               alignItems: "center",
               backgroundColor: "#fff",
-              zIdex: 400,
+              zIndex: 40,
             }
           : {
               padding: ".5em 1em",

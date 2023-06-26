@@ -20,6 +20,7 @@ export const Banner = () => {
               display: "flex",
               alignItems: "center",
               padding: "2em 5em",
+              zIndex: 4
             }
           : {
               display: "flex",
@@ -68,6 +69,7 @@ export const Banner = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                zIndex: 6
               }
             : {
                 background: `url(${background})`,
