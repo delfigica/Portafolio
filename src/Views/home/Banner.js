@@ -4,7 +4,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { Box } from "@mui/system";
 import { Typography, useMediaQuery, useTheme } from "@mui/material";
 
-import background from "../assets/images/bg-intro-desktop.svg";
+import background from "../../assets/images/bg-intro-desktop.svg";
 
 
 export const Banner = () => {

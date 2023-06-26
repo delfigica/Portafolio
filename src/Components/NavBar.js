@@ -1,10 +1,17 @@
 import React from "react";
 
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export const NavBar = () => {
   const theme = useTheme();
   const laptop = useMediaQuery(theme.breakpoints.up("lg"));
+
+  const nav = useNavigate();
+
+  const goTo = (route) => {
+    nav(route);
+  };
 
   return (
     <Box
@@ -18,8 +25,8 @@ export const NavBar = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              backgroundColor: '#fff',
-              zIdex: 400
+              backgroundColor: "#fff",
+              zIdex: 400,
             }
           : {
               padding: ".5em 1em",
@@ -29,13 +36,13 @@ export const NavBar = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              backgroundColor: '#fff'
-
+              backgroundColor: "#fff",
             }
       }
     >
       <Typography
         color="primary"
+        onClick={() => goTo("/")}
         sx={
           laptop
             ? {
@@ -70,6 +77,7 @@ export const NavBar = () => {
         }
       >
         <Typography
+          onClick={() => goTo("/proyectos")}
           sx={{
             cursor: "pointer",
             "&:hover": { color: "rgb(74, 39, 98)", fontWeight: 600 },

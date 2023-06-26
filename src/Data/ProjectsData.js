@@ -18,10 +18,10 @@ export const projects = [
     image: "loopstudios.png",
   },
   {
-    id: "blorg",
+    id: "blogr",
     url: "https://delfigica.github.io/blogr-landing-page/",
     github: "https://github.com/delfigica/blogr-landing-page/",
-    image: "blorg.png",
+    image: "blogr.png",
   },
   {
     id: "easybank",

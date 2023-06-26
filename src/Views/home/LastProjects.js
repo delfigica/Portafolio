@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import {
-  Box,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Project } from "../../Components/Project";
+import { projects } from "../../Data/ProjectsData";
 
-import { Project } from "../Components/Project";
-import { projects } from "../Data/ProjectsData";
-
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 export const LastProjects = () => {
   const [projectsData, setProjectsData] = useState([]);
 
   useEffect(() => {
     setProjectsData(projects.slice(0, 2));
   }, []);
+
+  const nav = useNavigate();
+
+  const goToProjects = () => {
+    nav("/proyectos");
+  };
 
   const theme = useTheme();
   const laptop = useMediaQuery(theme.breakpoints.up("lg"));
@@ -37,9 +38,8 @@ export const LastProjects = () => {
         ))}
       </Box>
       <Box sx={{ display: "flex", justifyContent: "center", margin: "15px" }}>
-        <a
-          href="/proyectos"
-          style={{
+        <Box
+          sx={{
             textDecoration: "none",
             backgroundColor: "rgb(34,34,34)",
             color: "white",
@@ -47,13 +47,17 @@ export const LastProjects = () => {
             borderRadius: "5px",
             fontSize: "1.1em",
             fontFamily: "Poppins",
+            cursor: "pointer",
+            color: "#fff",
+            transition: '1s',
             "&:hover": {
               backgroundColor: "rgb(74, 39, 98)",
             },
           }}
+          onClick={goToProjects}
         >
           Más proyectos
-        </a>
+        </Box>
       </Box>
     </Box>
   );

@@ -22,6 +22,8 @@ export const Project = ({ project }) => {
   const theme = useTheme();
   const laptop = useMediaQuery(theme.breakpoints.up("lg"));
 
+  console.log('project: ', project)
+
   return (
     <>
       <Box
