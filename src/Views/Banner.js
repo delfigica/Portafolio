@@ -1,10 +1,11 @@
 import React from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 import { Box } from "@mui/system";
 import { Typography, useMediaQuery, useTheme } from "@mui/material";
 
 import background from "../assets/images/bg-intro-desktop.svg";
-import computer from "../assets/images/computer.png";
+
 
 export const Banner = () => {
   const theme = useTheme();
@@ -23,7 +24,7 @@ export const Banner = () => {
           : {
               display: "flex",
               flexDirection: "column-reverse",
-              padding: '1em 0'
+              padding: "1em 0",
             }
       }
     >
@@ -37,13 +38,19 @@ export const Banner = () => {
                   fontSize: "2.5em",
                   fontWeight: 600,
                   fontFamily: "Great Vibes",
-                  textAlign: 'center'
+                  textAlign: "center",
                 }
           }
         >
           Desarrolladora Web
         </Typography>
-        <Typography sx={laptop ? { textAlign: "center", width: "80%" } : {textAlign: 'center'}}>
+        <Typography
+          sx={
+            laptop
+              ? { textAlign: "center", width: "80%" }
+              : { textAlign: "center" }
+          }
+        >
           Aquí podras encontrar información sobre mi, mis proyectos y mis redes
           de contacto
         </Typography>
@@ -75,27 +82,12 @@ export const Banner = () => {
               }
         }
       >
-        <Box
-          sx={
-            laptop
-              ? {
-                  width: "450px",
-                  height: "300px",
-                  background: `url(${computer})`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "450px",
-                  backgroundPositionX: "center",
-                }
-              : {
-                  width: "300px",
-                  height: "200px",
-                  background: `url(${computer})`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "300px",
-                  backgroundPositionX: "center",
-                }
-          }
-        ></Box>
+        <Player
+          autoplay
+          loop
+          src="https://assets3.lottiefiles.com/packages/lf20_w51pcehl.json"
+          style={laptop ? { height: "700px", width: "700px", zIndex: 3 } : {height: "350px", width: "350px"}}
+        ></Player>
       </Box>
     </Box>
   );

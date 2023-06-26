@@ -2,12 +2,12 @@ import { Banner } from "./Views/Banner";
 
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./Style";
-import { Proyects } from "./Components/Proyects";
+
 import { Box } from "@mui/system";
-import { proyects } from "./Data/ProyectsData";
+
 import { NavBar } from "./Components/NavBar";
 import { AboutMe } from "./Views/AboutMe";
-import { LastProyects } from "./Views/LastProyects";
+import { LastProjects } from "./Views/LastProjects";
 import { Footer } from "./Views/Footer";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <NavBar />
         <Banner />
         <AboutMe />
-        <LastProyects />
+        <LastProjects />
         <Footer />
       </ThemeProvider>
     </Box>

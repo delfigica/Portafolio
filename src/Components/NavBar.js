@@ -18,7 +18,8 @@ export const NavBar = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              backgroundColor: '#fff'
+              backgroundColor: '#fff',
+              zIdex: 400
             }
           : {
               padding: ".5em 1em",
