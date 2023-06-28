@@ -31,8 +31,13 @@ export const Contact = () => {
             }
           : {
               background: "rgb(74, 39, 98)",
-              padding: "1em",
+              padding: "2em 1em",
               margin: "auto",
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '100vh'
             }
       }
     >

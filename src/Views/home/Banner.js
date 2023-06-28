@@ -6,7 +6,6 @@ import { Typography, useMediaQuery, useTheme } from "@mui/material";
 
 import background from "../../assets/images/bg-intro-desktop.svg";
 
-
 export const Banner = () => {
   const theme = useTheme();
   const laptop = useMediaQuery(theme.breakpoints.up("lg"));
@@ -20,12 +19,12 @@ export const Banner = () => {
               display: "flex",
               alignItems: "center",
               padding: "2em 5em",
-              zIndex: 4
+              zIndex: 4,
             }
           : {
               display: "flex",
               flexDirection: "column-reverse",
-              padding: "1em 0",
+              // padding: "1em 0",
             }
       }
     >
@@ -69,18 +68,19 @@ export const Banner = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                zIndex: 6
+                zIndex: 6,
               }
             : {
                 background: `url(${background})`,
                 backgroundRepeat: "no-repeat",
-                backgroundSize: "300px",
+                backgroundSize: "320px",
                 backgroundPositionX: "center",
-                width: "300px",
-                height: "250px",
+                width: "100%",
+                height: "200px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                margin: "auto",
               }
         }
       >
@@ -88,7 +88,11 @@ export const Banner = () => {
           autoplay
           loop
           src="https://assets3.lottiefiles.com/packages/lf20_w51pcehl.json"
-          style={laptop ? { height: "700px", width: "700px", zIndex: 3 } : {height: "350px", width: "350px"}}
+          style={
+            laptop
+              ? { height: "700px", width: "700px", zIndex: 3 }
+              : { height: "350px", width: "320px", margin: '10px 0px' }
+          }
         ></Player>
       </Box>
     </Box>
