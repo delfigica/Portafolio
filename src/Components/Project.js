@@ -22,7 +22,7 @@ export const Project = ({ project }) => {
   const theme = useTheme();
   const laptop = useMediaQuery(theme.breakpoints.up("lg"));
 
-  console.log('project: ', project)
+  console.log("project: ", project);
 
   return (
     <>
@@ -108,7 +108,14 @@ export const Project = ({ project }) => {
         )}
       </Box>{" "}
       {!laptop && (
-        <Box>
+        <Box
+          sx={{
+            zIndex: 4,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <a href={project?.url} target="_blank">
             <IconButton
               sx={{

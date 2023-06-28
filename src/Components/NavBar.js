@@ -37,6 +37,7 @@ export const NavBar = () => {
               justifyContent: "space-between",
               alignItems: "center",
               backgroundColor: "#fff",
+              zIndex: 40
             }
       }
     >
@@ -86,6 +87,7 @@ export const NavBar = () => {
           Proyectos
         </Typography>
         <Typography
+          onClick={() => goTo("/contacto")}
           sx={{
             cursor: "pointer",
             "&:hover": { color: "rgb(74, 39, 98)", fontWeight: 600 },
