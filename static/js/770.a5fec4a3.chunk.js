@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportafolio=self.webpackChunkportafolio||[]).push([[770],{7770:function(e,p,o){e.exports=o.p+"static/media/heroes-app.b993533575d16bd0e21d.png"}}]);

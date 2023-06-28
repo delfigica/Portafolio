@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportafolio=self.webpackChunkportafolio||[]).push([[629],{9629:function(c,a,e){c.exports=e.p+"static/media/interactive-card.a3e1c9f9f2cacb096d4c.png"}}]);
