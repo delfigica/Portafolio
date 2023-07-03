@@ -37,7 +37,7 @@ export const Contact = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              height: "100vh",
+              height: "calc(100vh - 64px)",
             }
       }
     >
