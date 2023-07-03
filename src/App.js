@@ -13,7 +13,7 @@ function App() {
   return (
     <Box>
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <BrowserRouter basename="/Portafolio">
         <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
