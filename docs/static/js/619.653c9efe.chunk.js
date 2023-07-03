@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportafolio=self.webpackChunkportafolio||[]).push([[619],{1619:function(o,t,a){o.exports=a.p+"static/media/bg-intro-desktop.ac077a6d396f9a0d260b.svg"}}]);

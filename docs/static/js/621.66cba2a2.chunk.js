@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportafolio=self.webpackChunkportafolio||[]).push([[621],{621:function(e,a,o){e.exports=o.p+"static/media/easybank.2bd93596130bf7e12243.png"}}]);

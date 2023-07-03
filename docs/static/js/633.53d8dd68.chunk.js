@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportafolio=self.webpackChunkportafolio||[]).push([[633],{7633:function(t,c,o){t.exports=o.p+"static/media/tip-calculator.3dd24bb53d320d81dccb.png"}}]);
