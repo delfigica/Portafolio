@@ -16,9 +16,9 @@ function App() {
         <BrowserRouter>
         <NavBar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/proyectos" element={<Projects />} />
-            <Route path="/contacto" element={<Contact />} />
+            <Route path="/Portafolio/" element={<Home />} />
+            <Route path="/Portafolio/proyectos" element={<Projects />} />
+            <Route path="/Portafolio/contacto" element={<Contact />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
