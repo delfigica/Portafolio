@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Portafolio/static/css/main.e8d9e083.css",
-    "main.js": "/Portafolio/static/js/main.2605b3df.js",
+    "main.css": "/Portafolio/static/css/main.a2ef04ae.css",
+    "main.js": "/Portafolio/static/js/main.e289e6c0.js",
     "static/js/801.f0413854.chunk.js": "/Portafolio/static/js/801.f0413854.chunk.js",
     "static/js/341.b77bb787.chunk.js": "/Portafolio/static/js/341.b77bb787.chunk.js",
-    "static/js/619.58c6b42a.chunk.js": "/Portafolio/static/js/619.58c6b42a.chunk.js",
+    "static/js/619.653c9efe.chunk.js": "/Portafolio/static/js/619.653c9efe.chunk.js",
     "static/js/461.77ef6473.chunk.js": "/Portafolio/static/js/461.77ef6473.chunk.js",
     "static/js/339.4f311cd8.chunk.js": "/Portafolio/static/js/339.4f311cd8.chunk.js",
     "static/js/52.18ad5b38.chunk.js": "/Portafolio/static/js/52.18ad5b38.chunk.js",
@@ -34,13 +34,13 @@
     "static/media/multi-step-form.png": "/Portafolio/static/media/multi-step-form.eb56c648c58a699a79ec.png",
     "static/media/tip-calculator.png": "/Portafolio/static/media/tip-calculator.3dd24bb53d320d81dccb.png",
     "static/media/advice-generator.png": "/Portafolio/static/media/advice-generator.bcf12a60f7c9f502c801.png",
-    "static/media/bg-intro-desktop.svg": "/Portafolio/static/media/bg-intro-desktop.b75996e02036b404c023a152ebe62961.svg",
+    "static/media/bg-intro-desktop.svg": "/Portafolio/static/media/bg-intro-desktop.ac077a6d396f9a0d260b089f32fc9b83.svg",
     "index.html": "/Portafolio/index.html",
-    "main.e8d9e083.css.map": "/Portafolio/static/css/main.e8d9e083.css.map",
-    "main.2605b3df.js.map": "/Portafolio/static/js/main.2605b3df.js.map"
+    "main.a2ef04ae.css.map": "/Portafolio/static/css/main.a2ef04ae.css.map",
+    "main.e289e6c0.js.map": "/Portafolio/static/js/main.e289e6c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8d9e083.css",
-    "static/js/main.2605b3df.js"
+    "static/css/main.a2ef04ae.css",
+    "static/js/main.e289e6c0.js"
   ]
 }
