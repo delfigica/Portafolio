@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportafolio=self.webpackChunkportafolio||[]).push([[178],{1178:function(a,e,p){a.exports=p.p+"static/media/age-calculator-app.e5ee05de0cacb52a8f3a.png"}}]);

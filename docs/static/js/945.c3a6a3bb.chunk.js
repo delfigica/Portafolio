@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportafolio=self.webpackChunkportafolio||[]).push([[945],{2945:function(e,o,p){e.exports=p.p+"static/media/url-shortening-api.9570c2df445eb54acec5.png"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportafolio=self.webpackChunkportafolio||[]).push([[516],{516:function(t,a,f){t.exports=f.p+"static/media/talk-right.6dfacffac50929504936.png"}}]);
