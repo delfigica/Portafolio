@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportafolio=self.webpackChunkportafolio||[]).push([[801],{5801:function(e,a,c){e.exports=c.p+"static/media/advice-generator.bcf12a60f7c9f502c801.png"}}]);

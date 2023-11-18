@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportafolio=self.webpackChunkportafolio||[]).push([[583],{2583:function(o,a,e){o.exports=e.p+"static/media/horacio-burgos.9e940a462f362893c05f.png"}}]);
