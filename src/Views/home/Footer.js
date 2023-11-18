@@ -34,19 +34,17 @@ export const Footer = () => {
           laptop
             ? {
                 fontSize: "2em",
-                fontFamily: "Great Vibes",
                 cursor: "pointer",
                 color: "#fff",
               }
             : {
                 fontSize: "1.8em",
-                fontFamily: "Great Vibes",
                 textAlign: "center",
                 color: "#fff",
               }
         }
       >
-        Delfina
+        delfinacañas
       </Typography>
 
       <Box

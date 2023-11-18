@@ -21,7 +21,7 @@ export const Contact = () => {
       sx={
         laptop
           ? {
-              height: "calc(100vh - 64px)",
+              height: "calc(100vh - 53px)",
               background: "#b695c0",
               padding: "0 5em",
               display: "flex",
@@ -154,7 +154,7 @@ export const Contact = () => {
                   fontWeight: 800,
                 }}
               >
-                Contactame
+                Contact me
               </Typography>
               <Box
                 sx={{

@@ -1,100 +1,123 @@
-import React from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { bannerEs, btnEs } from "../../Data/LenguageData";
+import { lenguageContext } from "../../Hooks/lenguageContext";
 
-import { Box } from "@mui/system";
-import { Typography, useMediaQuery, useTheme } from "@mui/material";
-
-import background from "../../assets/images/bg-intro-desktop.svg";
-
+import {
+  Box,
+  Button,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import me from "../../assets/images/me.png";
 export const Banner = () => {
   const theme = useTheme();
   const laptop = useMediaQuery(theme.breakpoints.up("lg"));
+  const nav = useNavigate();
+
+  const goTo = () => {
+    nav("/contacto");
+  };
+
+  const { lenguage } = useContext(lenguageContext);
 
   return (
     <Box
+      z
       sx={
         laptop
           ? {
-              height: "80vh",
+              height: "100vh",
+              color: "#ffffff",
+              padding: "2em",
               display: "flex",
+              justifyContent: "space-evenly",
               alignItems: "center",
-              padding: "2em 5em",
-              zIndex: 4,
             }
           : {
               display: "flex",
               flexDirection: "column-reverse",
-              // padding: "1em 0",
+              color: "#ffffff",
+              height: "92vh",
+              justifyContent: "space-around",
             }
       }
     >
-      <Box sx={laptop ? { width: "55%" } : {}}>
+      <Box sx={{ textAlign: "center" }}>
+        <Typography sx={laptop ? { fontSize: "3em" } : { fontSize: "1.5em" }}>
+          {lenguage == "en" ? "Hey! Welcome to my portfolio" : bannerEs.title}
+        </Typography>
         <Typography
-          color="primary"
           sx={
             laptop
-              ? { fontSize: "4em", fontWeight: 600, fontFamily: "Great Vibes" }
-              : {
-                  fontSize: "2.5em",
-                  fontWeight: 600,
-                  fontFamily: "Great Vibes",
+              ? {
+                  fontSize: "3em",
                   textAlign: "center",
+                  textDecoration: "3px underline #7f00ff",
+                }
+              : {
+                  fontSize: "1.5em",
+                  textAlign: "center",
+                  textDecoration: "3px underline #7f00ff",
                 }
           }
         >
-          Desarrolladora Web
+          {lenguage == "en" ? "I'm Delfina Cañas." : bannerEs.subtitle}
         </Typography>
         <Typography
           sx={
             laptop
-              ? { textAlign: "center", width: "80%" }
-              : { textAlign: "center" }
+              ? { width: "60%", margin: "10px auto" }
+              : { width: "90%", margin: "10px auto" }
           }
         >
-          Aquí podras encontrar información sobre mi, mis proyectos y mis redes
-          de contacto
+          {lenguage == "en"
+            ? `Based in Argentina. I'm front-end developer passionate about building
+          accesible web apps that users love.`
+            : bannerEs.description}
         </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-evenly",
+            marginTop: "20px",
+          }}
+        >
+          <Button variant="contained" onClick={goTo}>
+            {lenguage == 'en' ? "contact me" : btnEs.contact}
+          </Button>
+          <Button variant="outlined" color="white">
+            curriculum
+          </Button>
+        </Box>
       </Box>
       <Box
         sx={
           laptop
             ? {
-                width: "900px",
-                height: "500px",
-                background: `url(${background})`,
+                backgroundImage: `url(${me})`,
+                width: "400px",
+                height: "400px",
                 backgroundRepeat: "no-repeat",
-                backgroundSize: "700px",
                 backgroundPositionX: "center",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                zIndex: 6,
+                backgroundPositionY: "90%",
+                backgroundSize: "400px",
+                borderRadius: "50%",
               }
             : {
-                background: `url(${background})`,
+                backgroundImage: `url(${me})`,
+                width: "300px",
+                height: "300px",
                 backgroundRepeat: "no-repeat",
-                backgroundSize: "320px",
                 backgroundPositionX: "center",
-                width: "100%",
-                height: "200px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                margin: "auto",
+                backgroundPositionY: "90%",
+                backgroundSize: "300px",
+                borderRadius: "50%",
+                margin: "0px auto",
               }
         }
-      >
-        <Player
-          autoplay
-          loop
-          src="https://assets3.lottiefiles.com/packages/lf20_w51pcehl.json"
-          style={
-            laptop
-              ? { height: "700px", width: "700px", zIndex: 3 }
-              : { height: "350px", width: "320px", margin: '10px 0px' }
-          }
-        ></Player>
-      </Box>
+      ></Box>
     </Box>
   );
 };

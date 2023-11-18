@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { btnEs } from "../../Data/LenguageData";
+import { lenguageContext } from "../../Hooks/lenguageContext";
 
 import { Project } from "../../Components/Project";
 import { projects } from "../../Data/ProjectsData";
@@ -9,7 +11,7 @@ export const LastProjects = () => {
   const [projectsData, setProjectsData] = useState([]);
 
   useEffect(() => {
-    setProjectsData(projects.slice(0, 2));
+    setProjectsData(projects.slice(0, 4));
   }, []);
 
   const nav = useNavigate();
@@ -17,13 +19,20 @@ export const LastProjects = () => {
   const goToProjects = () => {
     nav("/proyectos");
   };
+  const { lenguage } = useContext(lenguageContext);
 
   const theme = useTheme();
   const laptop = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <Box sx={laptop ? { padding: "1em 5em" } : { padding: "1em" }}>
-      <Typography color="primary" sx={{ fontSize: "2em" }}>
-        Últimos proyectos
+      <Typography
+        sx={
+          laptop
+            ? { fontSize: "2em", color: "#fff", marginLeft: "90px" }
+            : { fontSize: "2em", color: "#fff", textAlign: "center" }
+        }
+      >
+        PROYECTS
       </Typography>
       <Box
         sx={{
@@ -49,14 +58,14 @@ export const LastProjects = () => {
             fontFamily: "Poppins",
             cursor: "pointer",
             color: "#fff",
-            transition: '1s',
+            transition: "1s",
             "&:hover": {
               backgroundColor: "rgb(74, 39, 98)",
             },
           }}
           onClick={goToProjects}
         >
-          Más proyectos
+          {lenguage == "en" ? "View More" : btnEs.proyects}
         </Box>
       </Box>
     </Box>

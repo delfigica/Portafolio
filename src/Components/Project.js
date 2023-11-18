@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-import { Box, IconButton, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  IconButton,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 import LanguageIcon from "@mui/icons-material/Language";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -10,7 +16,7 @@ export const Project = ({ project }) => {
 
   const getImage = async () => {
     const { default: image } = await import(
-      `../assets/images/${project.image}`
+      `../assets/images/Proyects/${project.image}`
     );
     setImage(image);
   };
@@ -22,10 +28,14 @@ export const Project = ({ project }) => {
   const theme = useTheme();
   const laptop = useMediaQuery(theme.breakpoints.up("lg"));
 
-  console.log("project: ", project);
-
   return (
-    <>
+    <Box
+      sx={
+        laptop
+          ? { margin: "10px", color: "#fff" }
+          : { margin: "5px", color: "#fff" }
+      }
+    >
       <Box
         sx={
           laptop
@@ -35,113 +45,80 @@ export const Project = ({ project }) => {
                 background: `url(${image})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "500px",
-                backgroundPositionX: "center",
-                borderRadius: "10px",
-                cursor: "pointer",
               }
             : {
-                width: "290px",
-                height: "150px",
+                width: "300px",
+                height: "132px",
                 background: `url(${image})`,
                 backgroundRepeat: "no-repeat",
-                backgroundSize: "340px",
-                backgroundPositionX: "center",
-                borderRadius: "10px",
-                margin: "10px 0px",
+                backgroundSize: "300px",
               }
         }
-        className="proyect-container"
+      ></Box>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
       >
-        {laptop && (
-          <Box
-            sx={
-              laptop
-                ? {
-                    width: "500px",
-                    height: "232px",
-                    backgroundColor: "#000000",
-                    borderRadius: "10px",
-                    opacity: 0,
-                  }
-                : {
-                    width: "290px",
-                    height: "150px",
-                  }
-            }
-            className="proyect-filter"
-          >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100%",
-              }}
-              className="proyect-button"
-            >
-              <a href={project?.url} target="_blank">
-                <IconButton
-                  sx={{
-                    color: "#FFFFFF",
-                    width: "50px",
-                    height: "50px",
-                    margin: "0px 20px",
-                  }}
-                >
-                  <LanguageIcon sx={{ fontSize: "1.5em" }} />
-                </IconButton>
-              </a>
-              <a href={project?.github} target="_blank">
-                <IconButton
-                  sx={{
-                    color: "#FFFFFF",
-                    width: "50px",
-                    height: "50px",
-                    margin: "0px 20px",
-                  }}
-                >
-                  <GitHubIcon sx={{ fontSize: "1.5em" }} />
-                </IconButton>
-              </a>
-            </Box>
-          </Box>
-        )}
-      </Box>{" "}
-      {!laptop && (
+        <Typography
+          sx={
+            laptop
+              ? {
+                  fontSize: "1.3em",
+                  textTransform: "uppercase",
+                  margin: "10px 0px",
+                }
+              : {
+                  fontSize: "1em",
+                  textTransform: "uppercase",
+                  margin: "10px 0px",
+                }
+          }
+        >
+          {project.title}
+        </Typography>
         <Box
           sx={{
-            zIndex: 4,
             display: "flex",
+            justifyContent: "space-between",
             alignItems: "center",
-            justifyContent: "center",
+            width: "70px",
           }}
+          className="proyect-button"
         >
           <a href={project?.url} target="_blank">
             <IconButton
               sx={{
-                color: "#101010",
-                width: "35px",
-                height: "35px",
-                margin: "0px 20px",
+                color: "#FFFFFF",
+                width: "30px",
+                height: "30px",
               }}
             >
-              <LanguageIcon sx={{ fontSize: "1.5em" }} />
+              <LanguageIcon sx={{ fontSize: "1em" }} />
             </IconButton>
           </a>
           <a href={project?.github} target="_blank">
             <IconButton
               sx={{
-                color: "#101010",
-                width: "35px",
-                height: "35px",
-                margin: "0px 20px",
+                color: "#FFFFFF",
+                width: "30px",
+                height: "30px",
               }}
             >
-              <GitHubIcon sx={{ fontSize: "1.5em" }} />
+              <GitHubIcon sx={{ fontSize: "1em" }} />
             </IconButton>
           </a>
         </Box>
-      )}
-    </>
+      </Box>
+      <Box sx={{ display: "flex" }}>
+        {project.lenguages.map((lenguage, i) => (
+          <Typography key={i} sx={{ marginRight: "10px" }}>
+            {lenguage}
+          </Typography>
+        ))}
+      </Box>
+    </Box>
   );
 };

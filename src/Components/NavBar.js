@@ -1,7 +1,17 @@
-import React from "react";
-
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { lenguageContext } from "../Hooks/lenguageContext";
+
+import {
+  Box,
+  IconButton,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import GTranslateIcon from "@mui/icons-material/GTranslate";
 
 export const NavBar = () => {
   const theme = useTheme();
@@ -11,6 +21,16 @@ export const NavBar = () => {
 
   const goTo = (route) => {
     nav(route);
+  };
+
+  const { setLenguage, lenguage } = useContext(lenguageContext);
+
+  const changeLenguage = () => {
+    if (lenguage == "es") {
+      setLenguage("en");
+    } else {
+      setLenguage("es");
+    }
   };
 
   return (
@@ -25,7 +45,7 @@ export const NavBar = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              backgroundColor: "#fff",
+              backgroundColor: "#1b1b1b",
               zIndex: 40,
             }
           : {
@@ -36,31 +56,30 @@ export const NavBar = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              backgroundColor: "#fff",
-              zIndex: 40
+              backgroundColor: "#1b1b1b",
+              zIndex: 40,
             }
       }
     >
       <Typography
-        color="primary"
         onClick={() => goTo("/")}
         sx={
           laptop
             ? {
-                fontSize: "2em",
+                fontSize: "1.5em",
                 fontWeight: 600,
-                fontFamily: "Great Vibes",
                 cursor: "pointer",
+                color: "#fff",
               }
             : {
                 fontSize: "1.5em",
                 fontWeight: 600,
-                fontFamily: "Great Vibes",
                 textAlign: "center",
+                color: "#fff",
               }
         }
       >
-        Delfina
+        delfinacañas
       </Typography>
       <Box
         sx={
@@ -68,41 +87,49 @@ export const NavBar = () => {
             ? {
                 display: "flex",
                 justifyContent: "space-between",
-                width: "250px",
+                alignItems: "center",
+                width: "100px",
               }
             : {
                 display: "flex",
                 justifyContent: "space-between",
-                width: "210px",
+                alignItems: "center",
+                width: "110px",
               }
         }
       >
-        <Typography
-          onClick={() => goTo("/proyectos")}
-          sx={{
-            cursor: "pointer",
-            "&:hover": { color: "rgb(74, 39, 98)", fontWeight: 600 },
+        <Typography sx={{ textTransform: "capitalize", color: '#fff' }}>{lenguage}</Typography>
+        <IconButton
+          sx={{ color: "#fff" }}
+          size="small"
+          onClick={changeLenguage}
+        >
+          <GTranslateIcon sx={{ margin: "0px 5px", fontSize: "1.2em" }} />
+        </IconButton>
+        <a
+          href="https://www.linkedin.com/in/delfina-ca%C3%B1as-459b6320b"
+          target="_blank"
+          style={{
+            textDecoration: "none",
+            color: "#fff",
+            display: "flex",
+            alignItems: "center",
           }}
         >
-          Proyectos
-        </Typography>
-        <Typography
-          onClick={() => goTo("/contacto")}
-          sx={{
-            cursor: "pointer",
-            "&:hover": { color: "rgb(74, 39, 98)", fontWeight: 600 },
+          <LinkedInIcon sx={{ margin: "0px 5px" }} />
+        </a>
+        <a
+          href="https://github.com/delfigica"
+          target="_blank"
+          style={{
+            textDecoration: "none",
+            color: "#fff",
+            display: "flex",
+            alignItems: "center",
           }}
         >
-          Contacto
-        </Typography>
-        <Typography
-          sx={{
-            cursor: "pointer",
-            "&:hover": { color: "rgb(74, 39, 98)", fontWeight: 600 },
-          }}
-        >
-          Blog
-        </Typography>
+          <GitHubIcon sx={{ margin: "0px 5px" }} />
+        </a>
       </Box>
     </Box>
   );
