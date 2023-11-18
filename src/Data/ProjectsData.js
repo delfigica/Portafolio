@@ -1,5 +1,32 @@
 export const projects = [
   {
+    id: "talk-right",
+    url: "https://delfigica.github.io/talk-right/",
+    github: "https://github.com/delfigica/talk-right",
+    image: "talk-right.png",
+    title: "Talk Right",
+    filter: ["react", "material ui"],
+    lenguages: ["ReactJs", "Material Ui"],
+  },
+  {
+    id: "url-shortening-api",
+    url: "https://delfigica.github.io/url-shortening-api/",
+    github: "https://github.com/delfigica/url-shortening-api",
+    image: "url-shortening-api.png",
+    title: "Url shortening api",
+    filter: ["react", "material ui", "api"],
+    lenguages: ["ReactJs", "Material Ui"],
+  },
+  {
+    id: "age-calculator-react-app",
+    url: "https://delfigica.github.io/age-calculator-react-app/",
+    github: "https://github.com/delfigica/age-calculator-react-app",
+    image: "age-calculator-app.png",
+    title: "Age calculator app",
+    filter: ["next"],
+    lenguages: ["NextJs"],
+  },
+  {
     id: "rock-paper-scissors",
     url: "https://delfigica.github.io/rock-paper-scissors/",
     github: "https://github.com/delfigica/rock-paper-scissors",
@@ -126,4 +153,5 @@ export const proyectsFilter = [
   "material ui",
   "form",
   "api",
+  "next"
 ];
