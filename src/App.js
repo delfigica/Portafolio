@@ -10,6 +10,7 @@ import { theme } from "./Style";
 import { Box } from "@mui/system";
 import { lenguageContext } from "./Hooks/lenguageContext";
 import { useState } from "react";
+import { Footer } from "./Views/home/Footer";
 function App() {
   const [lenguage, setLenguage] = useState("en");
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="/proyectos" element={<Projects />} />
               <Route path="/contacto" element={<Contact />} />
             </Routes>
+            <Footer />
           </BrowserRouter>
         </ThemeProvider>
       </lenguageContext.Provider>

@@ -41,7 +41,7 @@ export const projects = [
     github: "https://github.com/delfigica/cocos-movies",
     image: "cocos-movies.png",
     title: "Cocos Movies",
-    filter: ["react", "proyects for others", "api"],
+    filter: ["react", "projects for others", "api"],
     lenguages: ["ReactJs", "NextJs", "Typescript"],
   },
   {
@@ -95,7 +95,7 @@ export const projects = [
     github: "https://github.com/delfigica/Horacio-Burgos-musica/",
     image: "horacio-burgos.png",
     title: "Horacio Burgos",
-    filter: ["vainilla", "landing page"],
+    filter: ["vainilla", "landing page", "projects for others"],
     lenguages: ["HTML", "CSS"],
   },
   {
@@ -104,7 +104,7 @@ export const projects = [
     github: "https://github.com/delfigica/leone-este-consultores",
     image: "leone-consultores.png",
     title: "Leone Este Consultores",
-    filter: ["vainilla", "landing page"],
+    filter: ["vainilla", "landing page", "projects for others"],
     lenguages: ["HTML", "CSS"],
   },
   {
@@ -144,14 +144,55 @@ export const projects = [
     lenguages: ["ReactJs"],
   },
 ];
-export const proyectsFilter = [
-  "games",
-  "react",
-  "proyects for others",
-  "vainilla",
-  "landing page",
-  "material ui",
-  "form",
-  "api",
-  "next"
+export const projectsFilter = [
+  {
+    value: "all",
+    es: "Todos",
+    en: "All",
+  },
+  {
+    value: "games",
+    es: "Juegos",
+    en: "Games",
+  },
+  {
+    value: "react",
+    es: "ReactJs",
+    en: "ReactJs",
+  },
+  {
+    value: "projects for others",
+    en: "Projects for others",
+    es: "Proyectos para otros",
+  },
+  {
+    value: "vainilla",
+    es: "HTML & CSS",
+    en: "HTML y CSS",
+  },
+  {
+    value: "landing page",
+    en: "Landing Page",
+    es: "Páginas de presentación",
+  },
+  {
+    value: "material ui",
+    es: "Material UI",
+    en: "Material UI",
+  },
+  {
+    value: "form",
+    en: "Forms",
+    es: "Formularios",
+  },
+  {
+    value: "api",
+    en: "API's",
+    es: "Apis",
+  },
+  {
+    value: "next",
+    es: "NextJS",
+    en: "NextJS",
+  },
 ];
