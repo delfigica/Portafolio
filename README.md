@@ -9,11 +9,7 @@
 - Es completamente responsive, lo que garantiza una visualización óptima en dispositivos móviles, tablets y pantallas de escritorio.
 - Integra React Router para la navegación fluida entre diferentes secciones del portafolio.
 - Cuenta con un apartado de contacto que incluye un formulario para que los usuarios puedan ponerse en contacto conmigo. ¡Espero recibir tus mensajes!
-- Se ha agregado una animación de Lottie para brindar una experiencia visual atractiva y dinámica.
-
-## Próximamente: Apartado de Blog
-
-En futuras actualizaciones, planeo agregar un apartado de blog donde compartiré artículos y reflexiones relacionadas con mi trabajo y la industria de desarrollo web. ¡Mantente atento para futuras actualizaciones!
+- Se ha agregado una función para cambiar el lenguaje de la página entre Español e inglés.
 
 ## Instalación
 
