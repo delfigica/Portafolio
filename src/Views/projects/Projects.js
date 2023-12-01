@@ -11,6 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Footer } from "../home/Footer";
+import { projectEs } from "../../Data/LenguageData";
 
 export const Projects = () => {
   const [projectsData, setProjectsData] = useState(projects);
@@ -38,8 +39,8 @@ export const Projects = () => {
           padding: "0 5.5em",
         }}
       >
-        <Typography sx={{ fontSize: "2em", color: "#fff" }}>
-          PROJECTS
+        <Typography sx={{ fontSize: "2em", color: "#fff", textTransform: 'uppercase', marginLeft: '-10px' }}>
+        {lenguage == "en" ? "Projects" : projectEs.title}
         </Typography>
         <FormControl sx={{ color: "#fff" }} size="small">
           <InputLabel>

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { btnEs } from "../../Data/LenguageData";
+import { btnEs, projectEs } from "../../Data/LenguageData";
 import { lenguageContext } from "../../Hooks/lenguageContext";
 
 import { Project } from "../../Components/Project";
@@ -28,11 +28,21 @@ export const LastProjects = () => {
       <Typography
         sx={
           laptop
-            ? { fontSize: "2em", color: "#fff", marginLeft: "90px" }
-            : { fontSize: "2em", color: "#fff", textAlign: "center" }
+            ? {
+                fontSize: "2em",
+                color: "#fff",
+                marginLeft: "70px",
+                textTransform: "uppercase",
+              }
+            : {
+                fontSize: "2em",
+                color: "#fff",
+                textAlign: "center",
+                textTransform: "uppercase",
+              }
         }
       >
-        PROYECTS
+        {lenguage == "en" ? "Projects" : projectEs.title}
       </Typography>
       <Box
         sx={{

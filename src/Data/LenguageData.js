@@ -9,3 +9,7 @@ export const btnEs = {
   contact: "Contactarme",
   proyects: "Ver más",
 };
+
+export const projectEs = {
+  title: 'Proyectos'
+}
