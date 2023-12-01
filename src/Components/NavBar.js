@@ -45,7 +45,7 @@ export const NavBar = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              backgroundColor: "	rgba(27,27,27,0.90)",
+              backgroundColor: "rgba(27,27,27,0.90)",
               zIndex: 40,
             }
           : {
@@ -56,7 +56,7 @@ export const NavBar = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "rgba(27,27,27,0.90)",
               zIndex: 40,
             }
       }
@@ -98,7 +98,9 @@ export const NavBar = () => {
               }
         }
       >
-        <Typography sx={{ textTransform: "capitalize", color: '#fff' }}>{lenguage}</Typography>
+        <Typography sx={{ textTransform: "capitalize", color: "#fff" }}>
+          {lenguage}
+        </Typography>
         <IconButton
           sx={{ color: "#fff" }}
           size="small"

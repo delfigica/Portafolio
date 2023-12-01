@@ -9,8 +9,9 @@ import {
   MenuItem,
   Select,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
-import { Footer } from "../home/Footer";
 import { projectEs } from "../../Data/LenguageData";
 
 export const Projects = () => {
@@ -28,19 +29,38 @@ export const Projects = () => {
       setProjectsData(newProjects);
     }
   };
+  const theme = useTheme();
+  const laptop = useMediaQuery(theme.breakpoints.up("lg"));
   return (
     <Box
       sx={{ padding: "2em", color: "#fff", minHeight: "calc(100vh - 50px)" }}
     >
       <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: "0 5.5em",
-        }}
+        sx={
+          laptop
+            ? {
+                display: "flex",
+                justifyContent: "space-between",
+                padding: "0 5.5em",
+              }
+            : {
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-between",
+                height: "100px",
+              }
+        }
       >
-        <Typography sx={{ fontSize: "2em", color: "#fff", textTransform: 'uppercase', marginLeft: '-10px' }}>
-        {lenguage == "en" ? "Projects" : projectEs.title}
+        <Typography
+          sx={{
+            fontSize: "2em",
+            color: "#fff",
+            textTransform: "uppercase",
+            marginLeft: "-10px",
+          }}
+        >
+          {lenguage == "en" ? "Projects" : projectEs.title}
         </Typography>
         <FormControl sx={{ color: "#fff" }} size="small">
           <InputLabel>
