@@ -45,7 +45,7 @@ export const NavBar = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              backgroundColor: "	rgba(27,27,27,0.95)",
+              backgroundColor: "	rgba(27,27,27,0.90)",
               zIndex: 40,
             }
           : {
